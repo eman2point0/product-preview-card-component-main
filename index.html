@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: "FrauncesStyle";
+        src: url("./fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+      }
+
+      @font-face {
+        font-family: "MontserratStyle";
+        src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.tff");
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      html {
+        background-color: hsl(30, 38%, 92%);
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        width: 35%;
+        height: auto;
+        min-width: 340px;
+        max-width: 1440px;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      .product-photo {
+        height: 100%;
+        object-fit: contain;
+        border-radius: inherit;
+      }
+
+      .product-photo img {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+      }
+
+      .product-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-around;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .product-info p {
+        margin: 0;
+      }
+
+      .button-container {
+        display: block;
+      }
+
+      #product-category {
+        font-style: "Montserrat";
+        font-size: 0.8rem;
+        letter-spacing: 5px;
+        color: gray;
+      }
+
+      #product-name {
+        font-style: "FrauncesStyle";
+        font-weight: bolder;
+        font-size: 2rem;
+        font-variation-settings: "WONK" "on";
+      }
+
+      #product-description {
+        font-family: "MontserratStyle";
+        font-size: 0.9em;
+        color: hsl(228, 12%, 48%);
+      }
+
+      #product-price {
+        width: 100%;
+
+        display: flex;
+        gap: 20px;
+      }
+
+      #discount-price {
+        color: hsl(158, 36%, 37%);
+        font-family: "FrauncesStyle";
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      #old-price {
+        text-decoration: line-through;
+        align-self: top;
+        font-size: 1rem;
+        color: gray;
+      }
+      #add-button {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        background-color: hsl(158, 36%, 37%);
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+      }
+
+      #add-button:hover {
+        background-color: hsl(158, 36%, 20%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="product-photo">
+        <img
+          src="./images/image-product-desktop.jpg"
+          alt="Image of perfume product"
+        />
+      </div>
+      <div class="product-info">
+        <p id="product-category">PERFUME</p>
+        <p id="product-name">Gabrielle Essence Eau De Parfum</p>
+        <p id="product-description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p id="product-price">
+          <span id="discount-price">$149.99</span>
+          <span id="old-price">$169.99</span>
+        </p>
+        <div class="button-container">
+          <button id="add-button">
+            <img src="./images/icon-cart.svg" alt="Picture of shopping cart" />
+            <p>Add to Cart</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Emanuel Barcenas</a>.
+    </div>
+  </body>
+</html>
